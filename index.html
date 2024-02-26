@@ -48,6 +48,27 @@
         border-radius: 8px;
     }
 
+    .sectionWrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .optionWrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 600px;
+    }
+
+    .optionRow {
+        display: flex;
+        flex-direction: row;
+        font-family: 'Segoe UI', Arial, sans-serif;
+        width: auto;
+        padding: 20px;
+    }
+
     .flex-column {
         display: flex;
         flex-direction: column;
@@ -103,26 +124,49 @@
         background-color: #00438a;
         color: white;
     }
+
+    .copyNotification {
+        display: none;
+        position: absolute;
+        background-color: #4CAF50;
+        color: white;
+        padding: 12px;
+        border-radius: 4px;
+        max-width: 300px;
+        white-space: normal;
+        box-sizing: border-box;
+    }
+
+    .topBanner {
+        display: flex;
+        justify-content: center;
+        font-family: 'Segoe UI', Arial, sans-serif;
+        font-size: smaller;
+        color: white;
+        padding-top: 10px
+    }
+
+    @media (max-width: 600px) {
+        .sectionWrapper {
+            display: block;
+        }
+    }
 </style>
 
 <body class="body" onload="setup();">
-    <div id="copyNotification"
-        style="display: none; position: absolute; background-color: #4CAF50; color: white; padding: 12px; border-radius: 4px; max-width: 300px; white-space: normal; box-sizing: border-box;">
+    <div id="copyNotification" class="copyNotification">
         Content copied to clipboard, paste this into your outlook signature editor.
     </div>
     <div id="browserWarning"></div>
 
-        <div
-            style="display: flex; justify-content: center; font-family: 'Segoe UI', Arial, sans-serif; font-size: smaller; color:white; padding-top: 10px">
-                <span style="text-align: center;">Create your signature using a desktop email client for best results.
-                        </span>
-        </div>
- 
+    <div class="topBanner">
+        <span style="text-align: center;">Create your signature using a desktop email client for best results.
+        </span>
+    </div>
 
-    <div class="flexbox-wrapper" style="display: flex; justify-content: center; align-items: center; min-width: 600px;">
-        <div
-            style="display: flex; flex-direction: row; font-family: 'Segoe UI', Arial, sans-serif; width: auto; padding: 20px;">
 
+    <div class="optionWrapper">
+        <div class="optionRow">
             <div
                 style="display: flex; flex-direction: column; justify-content: flex-start; margin-right: 20px; background-color: white; padding: 20px; box-shadow: 0 0 4px 2px rgba(0,0,0,0.1); border-radius: 8px;">
                 <div style="margin-bottom: 15px;">
@@ -203,7 +247,7 @@
         </div>
     </div>
 
-    <div class="flexbox-wrapper" style="display: flex; justify-content: center; align-items: center;">
+    <div class="sectionWrapper">
         <div id="tmvSection" class="sectionParent">
             <div class="section">
                 <div id="tmvSectionCopy">
@@ -725,7 +769,6 @@
     </div>
 </body>
 
-<br>
 
 
 <script>
