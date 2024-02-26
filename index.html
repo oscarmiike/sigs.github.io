@@ -1044,6 +1044,8 @@
     // Ainslie Logo Selection
     function imageClicked(clickedLogoClass) {
         const allTargetLogos = document.querySelectorAll('span[data-target-logo]');
+        const abWebsite = document.querySelector('.abwebsite');
+        const acWebsite = document.querySelector('.acwebsite');
 
         allTargetLogos.forEach(targetLogo => {
             if (targetLogo.getAttribute('data-target-logo') === clickedLogoClass) {
@@ -1052,6 +1054,15 @@
                 targetLogo.style.display = 'none';
             }
         });
+
+        // Toggle website visibility based on clicked logo
+        if (clickedLogoClass === 'acLogo') {
+            abWebsite.style.display = 'none';
+            acWebsite.style.display = 'inline'; 
+        } else {
+            abWebsite.style.display = 'inline'; 
+            acWebsite.style.display = 'none';
+        }
     }
 
 
