@@ -687,18 +687,18 @@
     }
 
     // Firefox unsupported warning - copies parent elements for some reason
-    document.addEventListener('DOMContentLoaded', function () {
-        var isFirefox = typeof InstallTrigger !== 'undefined';
+    // document.addEventListener('DOMContentLoaded', function () {
+    //     var isFirefox = typeof InstallTrigger !== 'undefined';
 
-        if (isFirefox) {
-            var warningContainer = document.getElementById('browserWarning');
-            warningContainer.innerHTML = 'Warning: Firefox is not supported. Please use a different browser.';
-            warningContainer.style.color = 'orange';
-            warningContainer.style.textAlign = 'center';
-            warningContainer.style.padding = '10px 0';
-            warningContainer.style.fontSize = '18px';
-        }
-    });
+    //     if (isFirefox) {
+    //         var warningContainer = document.getElementById('browserWarning');
+    //         warningContainer.innerHTML = 'Warning: Firefox is not supported. Please use a different browser.';
+    //         warningContainer.style.color = 'orange';
+    //         warningContainer.style.textAlign = 'center';
+    //         warningContainer.style.padding = '10px 0';
+    //         warningContainer.style.fontSize = '18px';
+    //     }
+    // });
 
     // Hide/show sections based on button press
     function switchSection(sectionId) {
