@@ -1,0 +1,265 @@
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(180deg, #d7d2cc 0%, #304352 100%);
+    color: #333;
+    margin: 0;
+    min-height: 98vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* table, th, td {
+    border: 1px solid black;
+} */
+
+.titleContainer {
+    width: 100%;
+    height: 66px;
+    background: #1d2125;
+    color: #fff;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+}
+
+.title {
+    flex: 1;
+    color: #cccccc;
+    text-align: left;
+    margin-left: 20px;
+}
+
+.fetch-container {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 20px;
+    background-color: #1d2125;
+    border-radius: 4px;
+    color: #cccccc;
+}
+
+.copied-message {
+    display: none;
+    color: #cccccc;
+    margin-right: 20px;
+    font-size: 14px;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 50%;
+    margin-right: 20px;
+}
+
+.inputMobile.input-shared-style {
+    width: 100%;
+}
+
+.position-absolute {
+    position: absolute;
+    right: -85px;
+    top: 0;
+    bottom: 0;
+    height: fit-content;
+    margin: auto 0;
+}
+
+.get-btn {
+    padding: 5px 10px;
+    background: #2b3137;
+    color: #cccccc;
+    border: 1px solid #464646;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-right: 10px;
+    font-size: 13px;
+    transition: box-shadow 0.3s ease;
+}
+
+.get-btn:hover {
+    outline: none;
+    box-shadow: 0 0 6px #ecd282;
+}
+
+
+.input-shared-style {
+    flex-grow: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+.copyNotification {
+    display: none;
+    position: absolute;
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px;
+    border-radius: 4px;
+    max-width: 300px;
+    white-space: normal;
+    box-sizing: border-box;
+}
+
+
+
+.sectionParent {
+    display: none;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: white;
+    max-width: auto;
+    min-width: 500px;
+    padding: 20px;
+    box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.sectionWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.optionWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.optionRow {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: white;
+    max-width: auto;
+    min-width: 500px;
+    padding: 30px;
+    box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.flex-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.flex-row label {
+    width: 80px;
+    margin-right: 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+.input-style {
+    flex-grow: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.logo {
+    cursor: pointer;
+}
+
+.logo img {
+    width: 120px;
+    vertical-align: middle;
+}
+
+.logo.aLogo img {
+    width: 100px;
+}
+
+.pressed {
+    background-color: #ecd282 !important;
+    color: black;
+}
+
+.topBanner {
+    display: flex;
+    justify-content: center;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: smaller;
+    color: white;
+    padding-top: 10px
+}
+
+.fade-out {
+    animation: fadeOutAnimation 0.5s forwards;
+}
+
+.fade-in {
+    animation: fadeInAnimation 0.5s forwards;
+}
+
+@keyframes fadeOutAnimation {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeInAnimation {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 900px) {
+    .titleContainer {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        width: 100%; /* Ensure it spans the full width */
+    }
+    .title {
+        margin-left: 0;
+        margin-bottom: 5px;
+    }
+    .fetch-container {
+        order: 1;
+        margin-right: 0;
+    }
+    .copied-message {
+        display: none; /* Ensure it's visible */
+        order: 2; /* This places it visually below the fetch-container */
+        margin-right: 0;
+    }
+    .get-btn {
+        padding: 5px 5px; /* 'none' is not a valid value for padding */
+    }
+}
