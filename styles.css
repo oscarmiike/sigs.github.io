@@ -255,11 +255,11 @@ body {
         margin-right: 0;
     }
     .copied-message {
-        display: none; /* Ensure it's visible */
-        order: 2; /* This places it visually below the fetch-container */
+        display: none; 
+        order: 2; 
         margin-right: 0;
     }
     .get-btn {
-        padding: 5px 5px; /* 'none' is not a valid value for padding */
+        padding: 5px 5px; 
     }
 }
