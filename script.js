@@ -320,6 +320,8 @@ document.addEventListener('DOMContentLoaded', function () {
     officeSelected(initialOffice);
 });
 
+
+// hectic js to simply hide and show the mobile phone number ( *~*)
 document.addEventListener('DOMContentLoaded', function () {
     const toggleMobile = document.getElementById('toggleMobile');
     let office = document.getElementById('inputOffice').value
