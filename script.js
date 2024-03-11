@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const abButton = document.getElementById("ab");
     switchSection("abSection");
+    abButton.classList.add('pressed')
 
 
     // Load all the base64 images
